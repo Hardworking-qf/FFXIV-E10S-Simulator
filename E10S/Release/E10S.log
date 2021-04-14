@@ -1,0 +1,47 @@
+﻿  Base.cpp
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Base.cpp(13,16): warning C4305: “初始化”: 从“double”到“float”截断
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Base.cpp(15,16): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Base.cpp(16,14): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Base.cpp(17,21): warning C4305: “初始化”: 从“double”到“float”截断
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Base.cpp(18,20): warning C4244: “参数”: 从“int”转换到“GLfloat”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Base.cpp(22,13): warning C4305: “参数”: 从“double”到“float”截断
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Base.cpp(27,64): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Base.cpp(29,42): warning C4305: “参数”: 从“double”到“float”截断
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Base.cpp(29,31): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Base.cpp(34,37): warning C4305: “参数”: 从“double”到“float”截断
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Base.cpp(38,10): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Base.cpp(39,23): warning C4305: “初始化”: 从“double”到“float”截断
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Base.cpp(40,18): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Base.cpp(41,22): warning C4305: “参数”: 从“double”到“GLfloat”截断
+  Button.cpp
+  DrawBase.cpp
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\DrawBase.cpp(17,47): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\DrawBase.cpp(17,24): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+  Main.cpp
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Rect.h(8,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Rect.h(9,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Rect.h(12,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Rect.h(13,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Rect.h(16,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Rect.h(17,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Rect.h(20,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Rect.h(21,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Main.cpp(73,74): warning C4305: “初始化”: 从“double”到“float”截断
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Main.cpp(74,75): warning C4305: “初始化”: 从“double”到“float”截断
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Main.cpp(75,75): warning C4305: “初始化”: 从“double”到“float”截断
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Main.cpp(76,74): warning C4305: “初始化”: 从“double”到“float”截断
+  Mechanics.cpp
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Rect.h(8,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Rect.h(9,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Rect.h(12,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Rect.h(13,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Rect.h(16,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Rect.h(17,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Rect.h(20,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\E10S\Rect.h(21,12): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+  Mouse.cpp
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 127 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  E10S.vcxproj -> Z:\课业\大三下\无聊练手的东西\臭狗转转转\E10S\Release\E10S.exe
