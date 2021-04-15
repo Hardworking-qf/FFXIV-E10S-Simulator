@@ -50,7 +50,7 @@ void FrontBack() {
 	MechanicsStartT = currT;
 	DrawMechanics = []() {
 		if (currT - MechanicsStartT >= 3000) {
-			glColor3f(.15, .15, .15);
+			glColor3f(.2, 0, 0);
 			DrawRect(Vector2Df{ 0,0 }, Vector2Df{ 1,1 });
 			glColor3f(0, 1, 0);
 			DrawRect(safeZone.a, safeZone.b);
@@ -69,7 +69,7 @@ void LeftRight() {
 	MechanicsStartT = currT;
 	DrawMechanics = []() {
 		if (currT - MechanicsStartT >= 3000) {
-			glColor3f(.15, .15, .15);
+			glColor3f(.2, 0, 0);
 			DrawRect(Vector2Df{ 0,0 }, Vector2Df{ 1,1 });
 			glColor3f(0, 1, 0);
 			DrawRect(safeZone.a, safeZone.b);
@@ -102,32 +102,30 @@ void FrontBack4(){
 	shadowArr = randomArr();
 	MechanicsStartT = currT;
 	DrawMechanics = []() {
+		glColor3f(.2, 0, 0);
 		if (currT - MechanicsStartT <=3000) {
 			boss.SHADOW_DIRE = shadowArr[0];
 		}
-		else if (currT - MechanicsStartT <= 4000) {// 第一次区域&第二次影子显示
+		else if (currT - MechanicsStartT <= 4500) {// 第一次区域&第二次影子显示
 			boss.SHADOW_DIRE = shadowArr[1];
 			int safe_dire = (boss.ATK_DIRE + shadowArr[0]) % 4;
 			SetSafeZone(safe_dire);
-			glColor3f(.15, .15, .15);
 			DrawRect(Vector2Df{ 0,0 }, Vector2Df{ 1,1 });
 			glColor3f(0, 1, 0);
 			DrawRect(safeZone.a, safeZone.b);
 		}
-		else if (currT - MechanicsStartT <= 5000) {
+		else if (currT - MechanicsStartT <= 6000) {
 			boss.SHADOW_DIRE = shadowArr[2];
 			int safe_dire = (boss.ATK_DIRE + shadowArr[1]) % 4;
 			SetSafeZone(safe_dire);
-			glColor3f(.15, .15, .15);
 			DrawRect(Vector2Df{ 0,0 }, Vector2Df{ 1,1 });
 			glColor3f(0, 1, 0);
 			DrawRect(safeZone.a, safeZone.b);
 		}
-		else if(currT - MechanicsStartT <= 6000) {
+		else if(currT - MechanicsStartT <= 7500) {
 			boss.SHADOW_DIRE = shadowArr[3];
 			int safe_dire = (boss.ATK_DIRE + shadowArr[2]) % 4;
 			SetSafeZone(safe_dire);
-			glColor3f(.15, .15, .15);
 			DrawRect(Vector2Df{ 0,0 }, Vector2Df{ 1,1 });
 			glColor3f(0, 1, 0);
 			DrawRect(safeZone.a, safeZone.b);
@@ -135,7 +133,6 @@ void FrontBack4(){
 		else {
 			int safe_dire = (boss.ATK_DIRE + boss.SHADOW_DIRE) % 4;
 			SetSafeZone(safe_dire);
-			glColor3f(.15, .15, .15);
 			DrawRect(Vector2Df{ 0,0 }, Vector2Df{ 1,1 });
 			glColor3f(0, 1, 0);
 			DrawRect(safeZone.a, safeZone.b);
@@ -150,32 +147,30 @@ void LeftRight4() {
 	shadowArr = randomArr();
 	MechanicsStartT = currT;
 	DrawMechanics = []() {
+		glColor3f(.2, 0, 0);
 		if (currT - MechanicsStartT <= 3000) {
 			boss.SHADOW_DIRE = shadowArr[0];
 		}
-		else if (currT - MechanicsStartT <= 4000) {// 第一次区域&第二次影子显示
+		else if (currT - MechanicsStartT <= 4500) {// 第一次区域&第二次影子显示
 			boss.SHADOW_DIRE = shadowArr[1];
 			int safe_dire = (boss.ATK_DIRE + shadowArr[0]) % 4;
 			SetSafeZone(safe_dire);
-			glColor3f(.15, .15, .15);
-			DrawRect(Vector2Df{ 0,0 }, Vector2Df{ 1,1 });
-			glColor3f(0, 1, 0);
-			DrawRect(safeZone.a, safeZone.b);
-		}
-		else if (currT - MechanicsStartT <= 5000) {
-			boss.SHADOW_DIRE = shadowArr[2];
-			int safe_dire = (boss.ATK_DIRE + shadowArr[1]) % 4;
-			SetSafeZone(safe_dire);
-			glColor3f(.15, .15, .15);
 			DrawRect(Vector2Df{ 0,0 }, Vector2Df{ 1,1 });
 			glColor3f(0, 1, 0);
 			DrawRect(safeZone.a, safeZone.b);
 		}
 		else if (currT - MechanicsStartT <= 6000) {
+			boss.SHADOW_DIRE = shadowArr[2];
+			int safe_dire = (boss.ATK_DIRE + shadowArr[1]) % 4;
+			SetSafeZone(safe_dire);
+			DrawRect(Vector2Df{ 0,0 }, Vector2Df{ 1,1 });
+			glColor3f(0, 1, 0);
+			DrawRect(safeZone.a, safeZone.b);
+		}
+		else if (currT - MechanicsStartT <= 7500) {
 			boss.SHADOW_DIRE = shadowArr[3];
 			int safe_dire = (boss.ATK_DIRE + shadowArr[2]) % 4;
 			SetSafeZone(safe_dire);
-			glColor3f(.15, .15, .15);
 			DrawRect(Vector2Df{ 0,0 }, Vector2Df{ 1,1 });
 			glColor3f(0, 1, 0);
 			DrawRect(safeZone.a, safeZone.b);
@@ -183,7 +178,6 @@ void LeftRight4() {
 		else {
 			int safe_dire = (boss.ATK_DIRE + boss.SHADOW_DIRE) % 4;
 			SetSafeZone(safe_dire);
-			glColor3f(.15, .15, .15);
 			DrawRect(Vector2Df{ 0,0 }, Vector2Df{ 1,1 });
 			glColor3f(0, 1, 0);
 			DrawRect(safeZone.a, safeZone.b);

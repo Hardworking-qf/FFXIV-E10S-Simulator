@@ -58,6 +58,7 @@ void ButtonsInit() {
 		boss = Boss{ NORTH, -1, -1 };
 		player = Player{ { 0.5,0.5 },-1 };
 		safeZone = Rect{ {0,0},{0,0} };
+		DrawMechanics = NULL;
 		} });
 }
 
