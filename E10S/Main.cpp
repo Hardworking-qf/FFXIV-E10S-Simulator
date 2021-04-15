@@ -106,6 +106,7 @@ void Draw() {
 	glLoadIdentity();
 
 	ButtonsDraw();
+	addText(GLUT_BITMAP_HELVETICA_10, (char*)"By JingYuZhuangYuan@Hwqf", 5, 150);
 	glutSwapBuffers();
 	glutPostRedisplay();
 }
