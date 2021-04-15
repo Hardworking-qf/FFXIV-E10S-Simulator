@@ -23,6 +23,6 @@ struct Player {
 };
 
 void DrawPlatform();
-void DrawBoss(int FACE_DIRE, int ATK_DIRE);
+void DrawBoss();
 void DrawPlayer();
 void DrawShadow(Vector2Df pos, int DIRE, bool large = false);

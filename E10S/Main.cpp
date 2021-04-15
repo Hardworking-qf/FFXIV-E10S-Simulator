@@ -7,32 +7,57 @@ using namespace std;
 #include "Mechanics.h"
 extern int winw, winh;
 extern Player player;
+extern Boss boss;
 extern void (*DrawMechanics)(void);
-time_t lastT, deltaT;
+extern time_t currT, lastT, deltaT, MechanicsStartT;
 bool Keydown[4] = { false, false, false, false };// WASD
-
-
+extern Rect safeZone;
 
 extern vector<Button*> buttons;
 void ButtonsInit() {
 	// °´Å¥
 	buttons.push_back(new Button{ 5,5, 100,25,(char*)"Front-Back", GLUT_BITMAP_HELVETICA_10,[]() {
+		player.SHADOW_DIRE = -1;
 		 FrontBack();
 		} });
 	buttons.push_back(new Button{ 120,5, 100,25,(char*)"4 Front-Back", GLUT_BITMAP_HELVETICA_10,[]() {
-
+		player.SHADOW_DIRE = -1;
+		 FrontBack4();
 		} });
 	buttons.push_back(new Button{ 5,40, 100,25,(char*)"Left-Right", GLUT_BITMAP_HELVETICA_10,[]() {
-		LeftRight();
+		player.SHADOW_DIRE = -1;
+		  LeftRight();
 		} });
 	buttons.push_back(new Button{ 120,40, 100,25,(char*)"4 Left-Right", GLUT_BITMAP_HELVETICA_10,[]() {
-
+		player.SHADOW_DIRE = -1;
+		  LeftRight4();
 		} });
 	buttons.push_back(new Button{ 5,75, 100,25,(char*)"PlaceShadow", GLUT_BITMAP_HELVETICA_10,[]() {
+		boss.SHADOW_DIRE = -1;
 		PlaceShadow();
 		} });
 	buttons.push_back(new Button{ 120,75, 100,25,(char*)"2 PlaceShadow", GLUT_BITMAP_HELVETICA_10,[]() {
-
+		boss.SHADOW_DIRE = -1;
+		PlaceShadow2();
+		} });
+	buttons.push_back(new Button{ 5,110, 100,25,(char*)"All Random", GLUT_BITMAP_HELVETICA_10,[]() {
+		boss = Boss{ NORTH, -1, -1 };
+		player.SHADOW_DIRE = -1;
+		safeZone = Rect{ {0,0},{0,0} };
+		srand(currT);
+		switch (rand() % 6) {
+		case 0:FrontBack(); break;
+		case 1:FrontBack4(); break;
+		case 2:LeftRight(); break;
+		case 3:LeftRight4(); break;
+		case 4:PlaceShadow(); break;
+		case 5:PlaceShadow2(); break;
+		};
+		} });
+	buttons.push_back(new Button{ 120,110, 100,25,(char*)"Initialize", GLUT_BITMAP_HELVETICA_10,[]() {
+		boss = Boss{ NORTH, -1, -1 };
+		player = Player{ { 0.5,0.5 },-1 };
+		safeZone = Rect{ {0,0},{0,0} };
 		} });
 }
 
@@ -44,10 +69,8 @@ void Resize(int w, int h) {
 
 void DrawScene() {
 	DrawPlatform();
-	if(DrawMechanics)DrawMechanics();
-	/*DrawShadow(player.pos, NORTH);
-	DrawShadow(player.pos, EAST);
-	DrawShadow(Vector2Df{ .5,.5 }, SOUTH, true);*/
+	if (DrawMechanics)DrawMechanics();
+	DrawBoss();
 	DrawPlayer();
 }
 
@@ -67,7 +90,7 @@ void Draw() {
 
 	DrawScene();
 
-	time_t currT = clock();
+	currT = clock();
 	deltaT = currT - lastT;
 	lastT = currT;
 	if (Keydown[0] && player.pos.y <= 1) player.pos += Vector2Df{ 0,MOV_SPD };
